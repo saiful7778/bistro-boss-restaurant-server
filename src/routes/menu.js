@@ -4,8 +4,7 @@ const route = express.Router();
 route.get("/", async (req, res) => {
   try {
   } catch (err) {
-    res.status(500).send({ message: "An error" });
+    res.status(500).send({ message: "a server error occurred" });
   }
 });
-
 module.exports = route;
