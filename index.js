@@ -4,6 +4,7 @@ import { config } from "dotenv";
 import mongoose from "mongoose";
 import authentication from "./src/routes/auth.js";
 import reviews from "./src/routes/review.js";
+import menus from "./src/routes/menu.js";
 
 config();
 // eslint-disable-next-line no-undef
@@ -42,6 +43,7 @@ app.get("/", (req, res) => {
 
 app.use("/authentication", authentication);
 app.use("/reviews", reviews);
+app.use("/menus", menus);
 
 app.listen(port, () => {
   console.log("server is runing on port", port);
