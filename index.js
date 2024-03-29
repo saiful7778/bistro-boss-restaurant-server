@@ -3,6 +3,7 @@ import cors from "cors";
 import { config } from "dotenv";
 import mongoose from "mongoose";
 import authentication from "./src/routes/auth.js";
+import reviews from "./src/routes/review.js";
 
 config();
 // eslint-disable-next-line no-undef
@@ -40,6 +41,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/authentication", authentication);
+app.use("/reviews", reviews);
 
 app.listen(port, () => {
   console.log("server is runing on port", port);
