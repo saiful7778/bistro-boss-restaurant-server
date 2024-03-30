@@ -27,7 +27,10 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: [
+      "http://localhost:5173",
+      "https://bistro-boss-restaurant-b958f.web.app",
+    ],
     methods: ["GET", "POST", "DELETE", "OPTIONS", "PATCH"],
     optionsSuccessStatus: 200,
   }),
